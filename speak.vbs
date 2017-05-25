@@ -1,0 +1,1 @@
+CreateObject("SAPI.SpVoice").Speak"Sorry sir, I don't understand xin chào"
