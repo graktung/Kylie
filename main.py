@@ -37,7 +37,13 @@ def KylieHears():
         r = sr.Recognizer()
         with sr.AudioFile(os.path.join(os.path.dirname(os.path.realpath(__file__)), "file.wav")) as source:
             audio = r.record(source)
-        return r.recognize_google(audio)
+        return r.recognize_google(audio) # r.recognize_google(audio, language='vi-VN')
+        # another way
+        # r = sr.Recognizer()
+        # with sr.Microphone() as source:
+        #     print("Listening...")
+        #     audio = r.listen(source)
+        #     return r.recognize_google(audio) # r.recognize_google(audio, language='vi-VN')
     except:
         return None
 
